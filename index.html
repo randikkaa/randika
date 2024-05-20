@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Sederhana</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Glorystore</h1>
+    </header>
+    <div class="navbar">
+      <a href="#beranda">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#keranjang">Keranjang</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+    <div class="container" id="beranda">
+      <h2 class="text-center">Beranda</h2>
+      <div class="image-container">
+        <img class="image" src="Glorystore 2024-05-16 at 14.50.09_9d8f6af4.jpg" alt="Deskripsi gambar" />
+        <div class="overlay">
+          <h2></h2>
+          <!-- Anda bisa menambahkan teks tambahan di sini -->
+        </div>
+      </div>
+
+      <!-- Konten Beranda -->
+    </div>
+    <div class="container" id="produk">
+      <h2>Produk</h2>
+      <div class="produk">
+        <div class="produk-item">
+          <h3>sendal</h3>
+          <img src="sendal1.jpeg" alt="Deskripsi produk" style="max-width: 200px" />
+          <!-- Mengurangi lebar gambar -->
+          <p>Harga: Rp 56.000</p>
+          <button class="btn btn-succes" onclick="tambahKeKeranjang('Produk 1', 56.000)" style="background-color: #2256ff; color: #fff">Tambahkan ke Keranjang</button>
+          <button
+            class="btn btn-succes"
+            onclick="beliProduk(https://shopee.co.id/IS-TOURING-HARGA-PROMO-TOKO-BARU-DISKON-NYATA-TERMURAH-TERBARU-SANDAL-slide-pria-FASHION-OVAL-i.1083793795.25463541919?sp_atk=d61d9cd9-cd53-42da-9c28-a260566af705&xptdk=d61d9cd9-cd53-42da-9c28-a260566af705)"
+            style="background-color: #505551; color: #fff"
+          >
+            Beli
+          </button>
+        </div>
+        <div class="produk-item">
+          <h3>sendal</h3>
+          <img src="sendal2.jpeg" alt="Deskripsi produk" style="max-width: 200px" />
+          <!-- Mengurangi lebar gambar -->
+          <p>Harga: Rp 49.000</p>
+          <button onclick="tambahKeKeranjang('Produk 2', 49.000)" style="background-color: #225dff; color: #fff">Tambahkan ke Keranjang</button>
+          <button
+            onclick="beliProduk('https://shopee.co.id/Jaket-hoodie-pria-murah-sablon-halaska-i.118906412.21514859754?sp_atk=0455fe3b-76d7-455b-88c7-dacfd94440e0&xptdk=0455fe3b-76d7-455b-88c7-dacfd94440e0')"
+            style="background-color: #3d443f; color: #fff"
+          >
+            Beli
+          </button>
+        </div>
+        <div class="produk-item">
+          <h3>sendal Gunung</h3>
+          <img src="sendal3.jpeg" alt="Deskripsi produk" style="max-width: 200px" />
+          <!-- Mengurangi lebar gambar -->
+          <p>Harga: Rp 100.000</p>
+          <button onclick="tambahKeKeranjang('Produk 2', 100.000)" style="background-color: #225dff; color: #fff">Tambahkan ke Keranjang</button>
+          <button
+            onclick="beliProduk('https://shopee.co.id/Larisko-Jaket-Windbreaker-Wexzy-Anti-Air-Premium-i.282751126.22074692786?sp_atk=834aee51-8d31-41dd-a362-5aceae830b83&xptdk=834aee51-8d31-41dd-a362-5aceae830b83')"
+            style="background-color: #343a35; color: #fff"
+          >
+            Beli"
+          </button>
+        </div>
+        <div class="produk-item">
+          <h3>sendal </h3>
+          <img src="sendal4.jpeg" alt="Deskripsi produk" style="max-width: 200px" />
+          <!-- Mengurangi lebar gambar -->
+          <p>Harga: Rp 110.000</p>
+          <button onclick="tambahKeKeranjang('Produk 2', 110.000)" style="background-color: #2250d0; color: #fff">Tambahkan ke Keranjang</button>
+          <button
+            onclick="beliProduk('https://shopee.co.id/Larisko-Jaket-Windbreaker-Wexzy-Anti-Air-Premium-i.282751126.22074692786?sp_atk=834aee51-8d31-41dd-a362-5aceae830b83&xptdk=834aee51-8d31-41dd-a362-5aceae830b83')"
+            style="background-color: #4c534e; color: #fff"
+          >
+            Beli"
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="keranjang">
+      <h2>Keranjang Belanja</h2>
+      <div class="keranjang" id="keranjang">
+        <ul id="keranjang-item"></ul>
+        <button style="background-color: #007bff; color: #fff" onclick="beliWhatsApp()">Beli</button>
+        <button style="background-color: #413c3d; color: #fff" onclick="kosongkanKeranjang()">Kosongkan Keranjang</button>
+      </div>
+    </div>
+    <div class="aboutme">
+      <h2>Tentang Kami</h2>
+      <p class="text-center">
+        Selamat datang di Glorystore, destinasi utama bagi para pencinta sendal yang mencari lebih dari sekadar busana; kami adalah panggung bagi gaya hidup yang tak terkalahkan. Di Glorystore, kami menghadirkan koleksi sendal yang
+        kurasi dengan hati-hati, menawarkan inovasi terkini dalam desain, kualitas yang tak tertandingi, dan harga yang terjangkau. Setiap sendal yang kami tawarkan adalah cerminan dari identitas Anda, menjadi pernyataan pribadi yang
+        memperkuat gaya hidup Anda. Dengan komitmen kami untuk merangkul keunikan, merayakan keberagaman, dan menemukan keindahan dalam setiap detail, kami bukan hanya toko online, tetapi komunitas yang menghubungkan Anda dengan cerita yang
+        kami bangun bersama-sama. Bersama tim kami yang siap membantu, Anda akan menemukan sendal yang tepat, memberikan sentuhan gaya yang tepat, dan merasakan pengalaman belanja yang mulus dari awal hingga akhir. Sambutlah gaya hidup Anda
+        dengan salam hangat dari Glorystore.
+      </p>
+    </div>
+    <div class="kontak" id="kontak">
+      <h2>Kontak</h2>
+      <p>
+        Jika Anda memiliki pertanyaan, hubungi kami di:
+        <a href="https://wa.me/6289646551657">083820298603</a>
+      </p>
+      <p>
+        atau di instagram:
+        <a href="https://www.instagram.com/randikkaaa?igsh=ZWFuaW5sdDlhbmVx&utm_source=qr"></a>randikkaaa
+      </p>
+    </div>
+    <footer>
+      <p>Hak Cipta &copy; randika</p>
+    </footer>
+    <script>
+      // JavaScript untuk keranjang
+      let keranjangItems = [];
+
+      function tambahKeKeranjang(nama, harga) {
+        keranjangItems.push({ nama: nama, harga: harga });
+        renderKeranjang();
+      }
+
+      function renderKeranjang() {
+        const keranjangElement = document.getElementById("keranjang-item");
+        keranjangElement.innerHTML = "";
+        let totalHarga = 0;
+        keranjangItems.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = `${item.nama} - Rp ${item.harga.toLocaleString()}`; // Ubah dolar menjadi rupiah
+          keranjangElement.appendChild(li);
+          totalHarga += item.harga;
+        });
+        const totalHargaElement = document.createElement("li");
+        totalHargaElement.textContent = `Total: Rp ${totalHarga.toLocaleString()}`; // Ubah dolar menjadi rupiah
+        keranjangElement.appendChild(totalHargaElement);
+      }
+
+      function kosongkanKeranjang() {
+        keranjangItems = [];
+        renderKeranjang();
+      }
+
+      function beliProduk(url) {
+        window.location.href = url;
+      }
+
+      function beliWhatsApp() {
+        // Ganti nomor telepon dengan nomor WhatsApp Anda
+        window.location.href = "http://wa.me/083820298603";
+      }
+    </script>
+  </body>
+</html>
